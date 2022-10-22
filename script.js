@@ -37,4 +37,27 @@ for(let i = 0; i < ncartas ; i++){
     container.innerHTML += ct;
 }
 // cria cartas --------------------------------------
+function marcaCarta(variavel){
+    if(click === 1){
+        viraCarta(variavel);
+        variavel.setAttribute('onclick','')
+        click++;
+        jogadas++;
+    }
+    else if(click === 2){
+        variavel.setAttribute('onclick','')
+        seguraCarta2 = seguraCarta1;
+        viraCarta(variavel);
+        click++;
+        verificaDupla();
+        jogadas++;
+        
+    }
+    
+}
 
+function viraCarta(variavel){
+    variavel.querySelector(`.front-face`).classList.toggle("front-flip");
+    variavel.querySelector(`.back-face`).classList.toggle("back-flip");
+    seguraCarta1 = variavel;
+}
