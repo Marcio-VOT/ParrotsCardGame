@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    box-sizing: border-box;
+}
+.topo{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 56px;
+line-height: 66px;
+letter-spacing: -0.004em;
+color: #75B79E;
+}
+main{
+    width: 100%;
+    height: 100%;
+    background-color:  #EEF9BF;
+}
+.cartas{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.carta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.face{
+    width: 117px;
+    height: 146px;
+    background: #A7E9AF;
+    border: 1px solid #99CEA8;
+    border-radius: 5px;
+    backface-visibility: hidden;
+    transition: all .5s;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: auto;
+    left: auto;
+}
+.face img{
+    width: 100px;
+    height: 100px;
+}
+.back-face {
+    transform: rotateY(180deg);
+  }
+
+  .carta:hover .back-face {
+    transform: rotateY(0deg);
+  }
+
+  .carta:hover .front-face {
+    transform: rotateY(-180deg);
+  }
