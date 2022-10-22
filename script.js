@@ -55,7 +55,31 @@ function marcaCarta(variavel){
     }
     
 }
+function verificaDupla(){
+    if (seguraCarta1.id != seguraCarta2.id){
+        seguraCarta1.setAttribute('onclick','marcaCarta(this)')
+        seguraCarta2.setAttribute('onclick','marcaCarta(this)')
+        setTimeout(viraCarta, 1000, seguraCarta1)
+        setTimeout(viraCarta, 1000, seguraCarta2) 
+        setTimeout(voltaClick, 1000);
+    }
+    else{
+        contaAcertos++;
+        setTimeout(testaVitoria, 50);
+        voltaClick();
+        
+    }
+    
+}
+function voltaClick(){
+    click = 1;
+}
 
+function testaVitoria(){
+    if(contaAcertos == ncartas/2){
+        alert(`acabô mané tu terminou em ${jogadas} jogadas`);
+    }
+}
 function viraCarta(variavel){
     variavel.querySelector(`.front-face`).classList.toggle("front-flip");
     variavel.querySelector(`.back-face`).classList.toggle("back-flip");
