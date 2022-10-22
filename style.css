@@ -2,19 +2,25 @@
 *{
     box-sizing: border-box;
 }
+body{
+    background-color:  #EEF9BF;
+}
 .topo{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 40px;
     font-family: 'Roboto';
-font-style: normal;
-font-weight: 700;
-font-size: 56px;
-line-height: 66px;
-letter-spacing: -0.004em;
-color: #75B79E;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 66px;
+    letter-spacing: -0.004em;
+    color: #75B79E;
 }
 main{
     width: 100%;
     height: 100%;
-    background-color:  #EEF9BF;
 }
 .cartas{
     margin-top: 80px;
@@ -24,7 +30,9 @@ main{
     height: 100px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
     
 }
 .carta{
@@ -32,6 +40,8 @@ main{
     align-items: center;
     justify-content: center;
     position: relative;
+    margin-left: 200px;
+    margin-bottom: 200px;
 }
 .face{
     width: 117px;
@@ -54,10 +64,9 @@ main{
     transform: rotateY(180deg);
   }
 
-  .carta:hover .back-face {
-    transform: rotateY(0deg);
-  }
-
-  .carta:hover .front-face {
+.front-flip {
     transform: rotateY(-180deg);
-  }
+    }
+.back-flip {
+transform: rotateY(0deg);
+}
