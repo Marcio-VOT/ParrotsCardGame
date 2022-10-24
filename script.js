@@ -9,7 +9,7 @@ let contaAcertos = 0
 let jogadas = 0;
 
 while(ncartas%2 != 0 || ncartas > 14 || ncartas < 4){
-    ncartas = Number(prompt("quantas cartas você quer?"));
+    ncartas = Number(prompt("escolha uma quantidade par de cartas entre 4 e 14"));
 }
 
 for(let i = 0; i<ncartas/2; i++){
@@ -75,7 +75,7 @@ function voltaClick(){
 
 function testaVitoria(){
     if(contaAcertos == ncartas/2){
-        alert(`acabô mané tu terminou em ${jogadas} jogadas`);
+        alert(`Você ganhou em ${jogadas} jogadas!`);
     }
 }
 function viraCarta(variavel){
