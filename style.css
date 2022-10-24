@@ -36,13 +36,16 @@ body{
     height: 145px;
     align-items: center;
     justify-content: center;
-    position: relative;
     margin-bottom: 34px;
     padding-right: 34px;
+    position: relative;
 }
 .face{
     width: 117px;
     height: 146px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: #A7E9AF;
     border: 1px solid #99CEA8;
     border-radius: 5px;

@@ -51,9 +51,7 @@ function marcaCarta(variavel){
         click++;
         verificaDupla();
         jogadas++;
-        
     }
-    
 }
 function verificaDupla(){
     if (seguraCarta1.id != seguraCarta2.id){
